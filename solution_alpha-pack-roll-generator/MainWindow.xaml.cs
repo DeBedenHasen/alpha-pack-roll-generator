@@ -1,4 +1,9 @@
-﻿namespace solution_alpha_pack_roll_generator
+﻿using Microsoft.Win32;
+using System;
+using System.Diagnostics;
+using System.Windows;
+
+namespace solution_alpha_pack_roll_generator
 {
     public partial class MainWindow : Window
     {
@@ -38,7 +43,12 @@
 
         private void Rarities_Defaults_Click(object sender, RoutedEventArgs e)
         {
-
+            
+        }
+        
+        private void Rarities_UseCustoms_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
 
         private MessageBoxResult YesNo(string msg, string title)
