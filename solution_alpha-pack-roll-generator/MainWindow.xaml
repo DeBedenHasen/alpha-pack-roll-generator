@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:solution_alpha_pack_roll_generator"
         mc:Ignorable="d"
         Title="MainWindow" Height="470" Width="800">
     <Grid>
@@ -15,12 +14,27 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="112.5" />
-            <RowDefinition Height="112.5" />
-            <RowDefinition Height="112.5" />
-            <RowDefinition Height="112.5" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <DataGrid Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Name="LB_Rarities" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" />
+        <TextBlock Name="Rarities_1" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="Common" />
+        <TextBlock Name="Rarities_2" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="Uncommon" />
+        <TextBlock Name="Rarities_3" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="Rare" />
+        <TextBlock Name="Rarities_4" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="Epic" />
+        <TextBlock Name="Rarities_5" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="Legendary" />
+
+        <TextBox Name="Rarities_1_C" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.330" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox Name="Rarities_2_C" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.285" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox Name="Rarities_3_C" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.224" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox Name="Rarities_4_C" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.125" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox Name="Rarities_5_C" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.036" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+
+        <Button Name="Rarities_Defaults" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Lato" Width="300" Height="50" Content="Reset to defaults" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Rarities_Defaults_Click"/>
     </Grid>
 </Window>

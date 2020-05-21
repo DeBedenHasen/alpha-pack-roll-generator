@@ -1,9 +1,5 @@
 ﻿<Application x:Class="solution_alpha_pack_roll_generator.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:solution_alpha_pack_roll_generator"
              StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
 </Application>
