@@ -36,18 +36,28 @@
 
         <Button Name="Rarities_Defaults" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontFamily="Lato" Width="150" Height="50" Content="Reset to defaults" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Rarities_Defaults_Click" />
         <Button Name="Rarities_UseCustoms" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontFamily="Lato" Width="150" Height="50" Content="Use custom values" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Rarities_UseCustoms_Click" />
+        
+        <Button Name="RollControls_ResetAmounts" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontFamily="Lato" Width="150" Height="50" Content="Reset Counters" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="RollControls_ResetAmounts_Click" />
+        
+        <TextBlock Name="Rolls_LastRollChance" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="0.000" />
 
         <TextBlock Name="Rolls_RollOnce_Result" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="—" />
+
+        <Button Name="Rolls_Results_Amount_1_Label" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Lato" Width="150" Height="50" Content="Common" Click="RollControls_RollUntil_Click" />
+        <Button Name="Rolls_Results_Amount_2_Label" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Lato" Width="150" Height="50" Content="Uncommon" Click="RollControls_RollUntil_Click" />
+        <Button Name="Rolls_Results_Amount_3_Label" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Lato" Width="150" Height="50" Content="Rare" Click="RollControls_RollUntil_Click" />
+        <Button Name="Rolls_Results_Amount_4_Label" Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Lato" Width="150" Height="50" Content="Epic" Click="RollControls_RollUntil_Click" />
+        <Button Name="Rolls_Results_Amount_5_Label" Grid.Row="4" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Lato" Width="150" Height="50" Content="Legendary" Click="RollControls_RollUntil_Click" />
+
+        <TextBlock Name="Rolls_Results_Amount_1" Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="0" />
+        <TextBlock Name="Rolls_Results_Amount_2" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="0" />
+        <TextBlock Name="Rolls_Results_Amount_3" Grid.Row="2" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="0" />
+        <TextBlock Name="Rolls_Results_Amount_4" Grid.Row="3" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="0" />
+        <TextBlock Name="Rolls_Results_Amount_5" Grid.Row="4" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="0" />
         
         <Button Name="RollControls_RollOnce" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Lato" Width="150" Height="50" Content="Roll Once" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="RollControls_RollOnce_Click" />
-        <Button Name="RollControls_RollUntil" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Lato" Width="150" Height="50" Content="Roll Until" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="RollControls_RollUntil_Click" />
+        <TextBlock Name="RollControls_RollUntil" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Lato" Text="Roll Until" />
         
-        <ComboBox Name="RollControls_StopOn" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Lato" Width="150" Height="50" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" SelectionChanged="RollControls_StopOn_SelectionChanged" >
-            <ComboBoxItem Name="RollControls_RollResult_1" Content="Common"/>
-            <ComboBoxItem Name="RollControls_RollResult_2" Content="Uncommon"/>
-            <ComboBoxItem Name="RollControls_RollResult_3" Content="Rare"/>
-            <ComboBoxItem Name="RollControls_RollResult_4" Content="Epic"/>
-            <ComboBoxItem Name="RollControls_RollResult_5" Content="Legendary"/>
-        </ComboBox>
+        <TextBlock Name="Rolls_TotalRolls" Grid.Row="5" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="0" />
     </Grid>
 </Window>
