@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Alpha Packs" Height="470" Width="800">
+        Title="Alpha Packs" Height="395" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -20,7 +20,6 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <TextBlock Name="Rarities_1" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="Common" />
@@ -29,13 +28,26 @@
         <TextBlock Name="Rarities_4" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="Epic" />
         <TextBlock Name="Rarities_5" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="Legendary" />
 
-        <TextBox Name="Rarities_1_C" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.330" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-        <TextBox Name="Rarities_2_C" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.285" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-        <TextBox Name="Rarities_3_C" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.224" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-        <TextBox Name="Rarities_4_C" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.125" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-        <TextBox Name="Rarities_5_C" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.036" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox Name="Rarities_1_Chance" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.330" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox Name="Rarities_2_Chance" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.285" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox Name="Rarities_3_Chance" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.224" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox Name="Rarities_4_Chance" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.125" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox Name="Rarities_5_Chance" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Consolas" Width="140" Height="50" Text="0.036" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 
         <Button Name="Rarities_Defaults" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontFamily="Lato" Width="150" Height="50" Content="Reset to defaults" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Rarities_Defaults_Click" />
         <Button Name="Rarities_UseCustoms" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontFamily="Lato" Width="150" Height="50" Content="Use custom values" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Rarities_UseCustoms_Click" />
+
+        <TextBlock Name="Rolls_RollOnce_Result" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="NoWrap" TextAlignment="Center" FontSize="25" FontFamily="Lato" Text="—" />
+        
+        <Button Name="RollControls_RollOnce" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Lato" Width="150" Height="50" Content="Roll Once" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="RollControls_RollOnce_Click" />
+        <Button Name="RollControls_RollUntil" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Lato" Width="150" Height="50" Content="Roll Until" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="RollControls_RollUntil_Click" />
+        
+        <ComboBox Name="RollControls_StopOn" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Lato" Width="150" Height="50" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" SelectionChanged="RollControls_StopOn_SelectionChanged" >
+            <ComboBoxItem Name="RollControls_RollResult_1" Content="Common"/>
+            <ComboBoxItem Name="RollControls_RollResult_2" Content="Uncommon"/>
+            <ComboBoxItem Name="RollControls_RollResult_3" Content="Rare"/>
+            <ComboBoxItem Name="RollControls_RollResult_4" Content="Epic"/>
+            <ComboBoxItem Name="RollControls_RollResult_5" Content="Legendary"/>
+        </ComboBox>
     </Grid>
 </Window>
