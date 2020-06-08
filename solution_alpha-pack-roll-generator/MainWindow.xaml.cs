@@ -94,10 +94,27 @@ namespace solution_alpha_pack_roll_generator
         private void Rarities_UseCustoms_Click(object sender, RoutedEventArgs e)
         {
             useCustom = true;
-            
-            for (int i = 0; i < rarities_boxeschances.Length; i++)
+
+            try
             {
-                rarities_valuescustom[i] = Convert.ToDouble(rarities_boxeschances[i].Text);
+                for (int i = 0; i < rarities_boxeschances.Length; i++)
+                {
+                    rarities_valuescustom[i] = Convert.ToDouble(rarities_boxeschances[i].Text);
+                }
+            }
+            catch (Exception)
+            {
+                useCustom = false;
+
+                for (int i = 0; i < rarities_valuescustom.Length; i++)
+                {
+                    rarities_valuescustom[i] = 0;
+                    rarities_boxeschances[i].Text = rarities_valuesdefault[i].ToString();
+                }
+
+                Error("Incorrect input format of at least one custom rarity value.\nResetting to defaults.", "Error");
+
+                return;
             }
 
             //Check if the values do not add up to 1
